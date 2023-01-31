@@ -451,3 +451,18 @@ a::after {
         font-size: 42%;
     }
 }
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 35%;
+    }
+}
+@media screen and (max-width: 340px) {
+    html {
+        font-size: 30%;
+    }
+}
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 27%;
+    }
+}
