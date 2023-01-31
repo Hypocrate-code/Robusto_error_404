@@ -1,3 +1,12 @@
+window.addEventListener('load',()=> {
+    document.body.setAttribute('data-attribute', 'launched');
+    document.body.style.setProperty('height', window.innerHeight);
+    document.body.style.setProperty('width', window.innerWidth);
+})
+window.addEventListener('resize',()=> {
+    document.body.style.setProperty('height', window.innerHeight);
+    document.body.style.setProperty('width', window.innerWidth);
+})
 
 let TL = gsap.timeline({repeat:-1});
     TL.to("#coffee-cup-right, #coffee-cup-left", 0, {x: origin,y:origin, rotate: origin, transformBox: 'view-box', transformOrigin: 'center'})
