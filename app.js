@@ -1,11 +1,19 @@
+const background = document.querySelector('.background');
 window.addEventListener('load',()=> {
     document.body.setAttribute('data-attribute', 'launched');
-    document.body.style.setProperty('height', window.innerHeight);
-    document.body.style.setProperty('width', window.innerWidth);
+    document.body.addEventListener('animationend', ()=>{
+        document.body.setAttribute('data-attribute', 'none')
+    }, {once: true})
+    document.body.style.setProperty('height', window.innerHeight + 'px');
+    document.body.style.setProperty('width', window.innerWidth + 'px');
+    background.style.setProperty('width', window.innerWidth + 'px');
+    background.style.setProperty('height', window.innerHeight + 'px');
 })
 window.addEventListener('resize',()=> {
-    document.body.style.setProperty('height', window.innerHeight);
-    document.body.style.setProperty('width', window.innerWidth);
+    document.body.style.setProperty('height', window.innerHeight + 'px');
+    document.body.style.setProperty('width', window.innerWidth + 'px');
+    background.style.setProperty('width', window.innerWidth + 'px');
+    background.style.setProperty('height', window.innerHeight + 'px');
 })
 
 let TL = gsap.timeline({repeat:-1});

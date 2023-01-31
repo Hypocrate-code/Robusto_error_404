@@ -20,6 +20,10 @@ html {
     --cream-brown: #eed492;
     --accent-color: #339989;
 }
+body[data-attribute="none"]::before,
+body[data-attribute="none"]::after {
+    display: none;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -60,6 +64,7 @@ body[data-attribute='launched']::after {
     width: 100%;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 .background::before,
 .background::after {
@@ -130,6 +135,7 @@ body[data-attribute='launched']::after {
     transform: translateX(50%);
     filter: opacity(0);
 }
+[data-attribute='none'] .weely,
 [data-attribute='launched'] .weely {
     filter: opacity(1);
 }
