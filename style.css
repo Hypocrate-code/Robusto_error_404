@@ -226,6 +226,7 @@ p{
 a {
     text-decoration: none;
     position: relative;
+    color: var(--latte-brown);
 }
 a:active {
     color: var(--latte-brown);
